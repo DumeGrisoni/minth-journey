@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import FormFields from '../components/FormFields';
-import Loading from '../components/Loading';
+import {FormFields, Loading} from '../components';
 
 const RenderCards = ({data, title})=>{
   if(data?.lenght > 0)  {
@@ -17,15 +16,15 @@ const RenderCards = ({data, title})=>{
 
 
 const Home = () => {
-  const [loading, setloading] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [images, setImages] = useState(null);
 
-  const [searchText, setsearchText] = useState('')
+  const [searchText, setsearchText] = useState('Bla')
 
   return (
     <section className=' max-w-7xl mx-auto' > 
       <div>
-        <h1 className='font-extrabold text-[#222328] text-[32px]'>
+        <h1 className='font-extrabold text-[#7289da] text-[32px]'>
           L'imagination de la communauté
         </h1>
         <p className='mt-2 text-[#666e75] text-[16px] max-w-[800px] '>
@@ -44,8 +43,8 @@ const Home = () => {
         ): (
           <>
           {searchText && (
-            <h2 className='font-medium text-[#666e75] text-xl mb-3'>
-              Voir les résultats pour <span className='text-[#222328]'>{searchText}</span> 
+            <h2 className='font-medium text-[#7289da] text-xl mb-3'>
+              Voir les résultats pour <span className='text-[#7289da]'>{searchText}</span> 
             </h2>
           )}
           <div className='grid lg:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-3'>
