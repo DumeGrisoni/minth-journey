@@ -2,7 +2,7 @@ import React from 'react'
 
 const CreateImage = () => {
   return (
-    <div>CreateImage</div>
+    <div>Image</div>
   )
 }
 
