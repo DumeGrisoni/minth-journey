@@ -14,7 +14,7 @@ const App = () => {
           Imagine !
         </Link>
       </header>
-      <main className='sm:p-8 px-4 py-8 w-full min-h-[calc(100vh-73px)] bg-[#1e2124]'>
+      <main className='sm:p-8 px-4 py-8 w-full min-h-[calc(100vh-81px)] bg-[#1e2124]'>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/create-image' element={<CreateImage />} />

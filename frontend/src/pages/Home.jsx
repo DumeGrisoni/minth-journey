@@ -23,6 +23,7 @@ const Home = () => {
 
   return (
     <section className=' max-w-7xl mx-auto' > 
+    {/** Titre et description */}
       <div>
         <h1 className='font-extrabold text-[#7289da] text-[32px]'>
           L'imagination de la communauté
@@ -31,10 +32,11 @@ const Home = () => {
           Voyagez dans l'imagination de la communauté et découvrez des images générées automatiquement.
         </p>
       </div>
+      {/** Formulaire Recherche */}
       <div className='mt-16'>
         <FormFields />
       </div>
-
+      {/** Si Loading = true alors on charge le Svg(Loading.jsx) sinon on affiche le resultat de la recherche sous forme de Card */}
       <div className='mt-10'>
         {loading ? (
           <div className='flex justify-center items-center'>
@@ -47,6 +49,7 @@ const Home = () => {
               Voir les résultats pour <span className='text-[#7289da]'>{searchText}</span> 
             </h2>
           )}
+          {/** Si aucun resultat trouvé apres recherche */}
           <div className='grid lg:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-3'>
             {searchText? (
               <RenderCards 
